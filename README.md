@@ -1,7 +1,10 @@
 # Google Books ETL Pipeline
 
 ### DAG Execution Overview
-Once the DAG is triggered (either manually or on its schedule), Airflow creates a **DAG Run**—an instantiation for that execution cycle. You can monitor the run's progress using Airflow’s intuitive UI.:contentReference[oaicite:1]{index=1}
+
+Designed and developed an automated ETL pipeline to extract data from the Google Books API, orchestrating the process with Airflow DAGs running within Docker containers. Implemented data transformation using Pandas, standardizing the structure and format of book data for seamless integration into downstream systems.
+Incorporated data quality checks to ensure the accuracy and integrity of the extracted book data before storing them in PostgreSQL.
+Conducted Exploratory Data Analysis (EDA) on stored data to uncover insights and trends for decision-making.
 
 ### Monitoring via Airflow UI
 - **Graph View**: Visual depiction of task dependencies and states (success, running, failed).  
