@@ -19,7 +19,7 @@ Developed a containerized ETL pipeline using Docker and Airflow, extracting ~30 
 ### Monitoring via Airflow UI
 - **Graph View**: Visual depiction of task dependencies and states (success, running, failed).  
 - **Grid View**: Heatmap showing status of each task across multiple runs—ideal for spotting trends or failures at a glance.  
-- **Task Instance View**: Clicking any task opens detailed views including logs, execution metadata, XComs, and rendered templates. This is your go-to for debugging.:contentReference[oaicite:4]{index=4}
+- **Task Instance View**: Clicking any task opens detailed views including logs, execution metadata, XComs, and rendered templates.
 
 ### Logs Output
 - Logs are generated per task instance and accessible directly in the UI.
