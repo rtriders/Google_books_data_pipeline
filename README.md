@@ -2,9 +2,7 @@
 
 ### DAG Execution Overview
 
-Designed and developed an automated ETL pipeline to extract data from the Google Books API, orchestrating the process with Airflow DAGs running within Docker containers. Implemented data transformation using Pandas, standardizing the structure and format of book data for seamless integration into downstream systems.
-Incorporated data quality checks to ensure the accuracy and integrity of the extracted book data before storing them in PostgreSQL.
-Conducted Exploratory Data Analysis (EDA) on stored data to uncover insights and trends for decision-making.
+Developed a containerized ETL pipeline using Docker and Airflow, extracting ~30 book records daily from the Google Books API. Transformed raw data via Pandas, enforcing schema consistency and conducting critical data quality validations before bulk loading into PostgreSQL. Executed Exploratory Data Analysis (EDA) to identify trends and support downstream decision-making.
 
 ### Monitoring via Airflow UI
 - **Graph View**: Visual depiction of task dependencies and states (success, running, failed).  
