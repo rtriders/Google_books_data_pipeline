@@ -25,11 +25,18 @@ Developed a containerized ETL pipeline using Docker and Airflow, extracting ~30 
 - Logs are generated per task instance and accessible directly in the UI.
 - Airflow supports custom handler configurations, including local log storage and options for remote storage like S3 or GCS.:contentReference[oaicite:5]{index=5}
 
-### Sample Execution Flow
+## Execution Flow
 
-1. **Trigger DAG** (e.g., `fetch_and_store_google_books`) via UI or CLI.
-2. The **Graph View** updates to show task status transitions—from `fetch_book_data` to `create_table` to `insert_book_data`.
-3. Upon successful run, each task becomes green in Grid View.
-4. Click any task to inspect logs, view outputs, check XCom values, or troubleshoot failures.
-5. Logs include details like API fetch responses, SQL insertion confirmations, and error stacks if something fails.
+1. **Data Extraction**: The pipeline kicks off by invoking the `get_google_data_books` task (PythonOperator), which fetches book information (e.g., title, author, published date, category, language) from the Google Books API and pushes the results to XCom for downstream use.  
+   :contentReference[oaicite:0]{index=0}
+
+2. **Table Creation**: The `create_table` task (PostgresOperator) ensures the target `books` table exists in PostgreSQL before inserting data.
+
+3. **Data Load**: The `insert_book_data` task (PythonOperator with PostgresHook) retrieves the cleansed dataset from XCom and performs batch insertion into the PostgreSQL `books` table.
+
+4. **Task Scheduling & Orchestration**: Airflow’s **Scheduler** triggers the DAG based on the defined execution schedule, while the **Executor** runs tasks in order following declared dependencies. The full pipeline progression—Extract → Create Table → Load—is visually represented in Airflow’s **Graph View**.  
+   :contentReference[oaicite:1]{index=1}
+
+5. **Observability & Reliability**: Task runs, statuses, retries, and logs are tracked in Airflow’s metadata database. Using Airflow’s UI, users can access runtime logs, retry failed tasks, monitor historical runs in **Grid View**, and troubleshoot issues effectively.  
+   :contentReference[oaicite:2]{index=2}
 
