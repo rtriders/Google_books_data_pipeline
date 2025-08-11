@@ -8,6 +8,14 @@ Developed a containerized ETL pipeline using Docker and Airflow, extracting ~30 
 
 [Architecture Diagram](https://github.com/rtriders/Google_books_data_pipeline/blob/main/images/Pipeline_design.png)
 
+### Services Used
+
+1. [**Apache Airflow**](https://airflow.apache.org/docs/apache-airflow/stable/index.html): Apache Airflow is an open-source platform for **developing, scheduling, and monitoring batch-oriented workflows**. It enables users to programmatically author workflows using Python (via DAGs), and offers a web-based UI to visualize, track, and manage execution.:contentReference[oaicite:0]{index=0}  
+2. [**Pandas**](https://pandas.pydata.org/docs/): Pandas is a fast, powerful, open-source Python library offering **high-performance, easy-to-use data structures (like Series and DataFrame) and analysis tools** that simplify data manipulation, cleaning, and transformation.:contentReference[oaicite:1]{index=1}  
+3. [**Docker**](https://docs.docker.com/): Docker is a software platform enabling developers to **build, test, and deploy applications quickly using containers**, which are lightweight, isolated environments bundling code, dependencies, and runtime for consistency across environments.:contentReference[oaicite:2]{index=2}  
+4. [**PostgreSQL**](https://www.postgresql.org/about/): PostgreSQL is a powerful, open-source, object-relational database system known for its **reliability, data integrity, extensibility, and enterprise-level performance**, making it ideal for analytical and transactional workloads.:contentReference[oaicite:3]{index=3}
+
+
 ### Monitoring via Airflow UI
 - **Graph View**: Visual depiction of task dependencies and states (success, running, failed).  
 - **Grid View**: Heatmap showing status of each task across multiple runs—ideal for spotting trends or failures at a glance.  
