@@ -33,17 +33,3 @@ Developed a containerized ETL pipeline using Docker and Airflow, extracting ~30 
 4. Click any task to inspect logs, view outputs, check XCom values, or troubleshoot failures.
 5. Logs include details like API fetch responses, SQL insertion confirmations, and error stacks if something fails.
 
----
-
-###  Live Example (Visual)
-
-- **Graph View**: Shows tasks and their execution order.
-- **Grid View**: Gives historical task state overview.
-- **Task Logs**: Reveal run outputs and error diagnostics for each node.
-
-*(See UI previews at the top of this README for reference)*
-
----
-
-Let me know if you'd like to include sample log excerpts (e.g., API response snippets, SQL execution logs), or embed screenshots from your own local Airflow instance for authenticity.
-::contentReference[oaicite:6]{index=6}
