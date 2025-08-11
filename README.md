@@ -1,8 +1,12 @@
 # Google Books ETL Pipeline
 
-### DAG Execution Overview
+### Overview
 
 Developed a containerized ETL pipeline using Docker and Airflow, extracting ~30 book records daily from the Google Books API. Transformed raw data via Pandas, enforcing schema consistency and conducting critical data quality validations before bulk loading into PostgreSQL. Executed Exploratory Data Analysis (EDA) to identify trends and support downstream decision-making.
+
+### Architecture
+
+[Architecture Diagram](https://github.com/rtriders/Google_books_data_pipeline/blob/main/images/Pipeline_design.png)
 
 ### Monitoring via Airflow UI
 - **Graph View**: Visual depiction of task dependencies and states (success, running, failed).  
